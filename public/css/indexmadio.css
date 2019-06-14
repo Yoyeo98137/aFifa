@@ -1,0 +1,137 @@
+/* 响应式 */
+/* 头部列表 */
+@media screen and (min-width: 1781px){
+    .ms-nav-bg { display: none !important; }
+}
+@media screen and (min-width: 1366px) and (max-width: 1780px){
+    .ms-nav-bg { display: none !important; }
+    .w-50 { width: 66% !important; }
+    .hea-game { width:1330px !important; }
+    .hea-control { width: 1200px; left: -1030px; }
+    .hea-col-height { padding: 0 !important; padding-left: 32px !important; }
+    .hea-control li { line-height: 46px; width: 200px; height: 46px; }
+    .content { height: 450px !important; }
+    .mt-12 { margin-top: 2.8rem !important; }
+
+    .img1 img.ml-8 { margin-left: 2.8rem !important; }
+    .img4 img.ml-8 { margin-left: 1.8rem !important; }
+
+    .mt-15 { margin-top: 10rem !important; }
+
+    .mt-13 { margin-top: 5.3rem !important; }
+
+    .img6 .mt-15 { margin-top: 7.6rem !important; }
+    .img6>div img { top: -400px !important;left: -550px !important; }
+
+    .img7 .mt-12 { margin-top: 4.8rem !important; }
+}
+
+
+@media screen and (max-width: 1365px){
+    /* 原头部隐藏 */
+    .h-128 { display: none; }
+    /* 新头部显示 */
+    .img1 { 
+        background-image: url(../img/index/md/banner-1-md.jpg);
+        background-size: 100% 100%; 
+        overflow: hidden;
+    }
+    .img2 { 
+        background-image: url(../img/index/md/banner-2-md.jpg);
+        background-size: 100% 100%; 
+        overflow: hidden;
+    }
+    .img3 { 
+        background-image: url(../img/index/md/banner-3-md.jpg);
+        background-size: 100% 100%; 
+        overflow: hidden;
+    }
+    .img4 { 
+        background-image: url(../img/index/md/banner-4-md.jpg);
+        background-size: 100% 100%; 
+        overflow: hidden;
+    }
+    .img6 { 
+        background-image: url(../img/index/md/banner-6-md.jpg);
+        background-size: 100% 100%; 
+        overflow: hidden;
+    }
+    .img7 { 
+        background-image: url(../img/index/md/banner-5-md.jpg);
+        background-size: 100% 100%; 
+        overflow: hidden;
+    }
+
+    .img1 img.ml-8 { margin-left: -3.2rem !important; }
+    .img4 img.ml-8 { margin-left: -4.2rem !important; }
+    .img7 img.ml-8 { margin-left: 0.8rem !important; }
+    .img6>div img { top: -345px !important;left: -500px !important; }
+}
+
+@media screen and (max-width: 768px){
+    .img1 { background-image: url(../img/index/sm/banner-1-sm.jpg); overflow: visible;}
+    .img2 { background-image: url(../img/index/sm/banner-2-sm.jpg); overflow: visible;}
+    .img3 { background-image: url(../img/index/sm/banner-3-sm.jpg); overflow: visible;}
+    .img4 { background-image: url(../img/index/sm/banner-4-sm.jpg); overflow: visible;}
+    .img6 { background-image: url(../img/index/sm/banner-6-sm.jpg); overflow: visible;}
+    .img7 { background-image: url(../img/index/sm/banner-5-sm.jpg); overflow: visible;}
+
+    .content { width: 100%; height: 320px !important; }
+    .content-bgg { height: 2010px !important; }
+    .ban { width: inherit; padding: 0 !important; }
+    .top1 { 
+        margin: 0px auto;
+        width: inherit; height: 208px;
+        background: transparent;
+        text-align: center;
+    }
+    .img1 div.top1 { margin-top: 70px !important; }
+    .img2 div.top1 { margin-top: 90px !important; }
+    .img3 div { margin-top: 0px !important; }
+    .img3 div>img { display: none; }
+    .img3 div>p { margin-top: 70px !important; }
+    .img4 div.top1 { opacity: 1 !important;;margin-top: 80px !important; }
+
+    .bgg-font { margin: 0 !important;margin-top: 60px !important; }
+    /* .top1 button { width: 600px !important; } */
+
+    .content-bgg div.bgg-font { width: inherit !important; }
+
+    .img1 img { display: none !important; }
+    .img4 img { display: none !important; }
+    .img6>div { display: none !important; }
+    .img7>div { display: none !important; }
+
+    /* 底部 */
+    .hea-foot { display: none !important; }
+    header { width: inherit !important; }
+    .hea-top { width: inherit !important; }
+    .hea-mid { width: inherit !important; height: 300px !important; }
+    .hm-content { width: inherit !important; }
+    .bor-hide+a { display: none !important; }
+    .hm-ul li:last-child { display: none !important; }
+}
+
+/* 
+    @media screen and (min-width:992px){
+            .content{
+                background: #f00;
+                color: #ff0;
+            }
+        }
+        /* 768<=pad<991 中屏 
+        @media screen and (min-width:768px) and (max-width:991px){
+            .content{
+                background: #000;
+                color: #fff;
+            }
+        }
+        */
+        /* pad<=767 小屏 *//*
+        @media screen and (max-width:767px){
+            .content{
+                background: #ff0;
+                color: #f00;
+            }
+        }
+*/

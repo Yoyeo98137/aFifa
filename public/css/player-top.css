@@ -1,0 +1,151 @@
+html,body { height: 100%; }
+main { width: 100%; height: 100%; background: #ff3636; }
+
+.twc-nav {
+    width: 100%; height: 212px;
+    background: url(../img/nav/fut19-fnav-bg-lg-2x.jpg) no-repeat;
+    background-size: 100% 100%;
+}
+.twc-nav>div {
+    margin: 0 auto;
+    width: 1024px; height: inherit;
+}
+/* 一级ul */
+.twc-nav-list {
+    margin-top: 30px;
+}
+.twc-nav-list>li {
+    padding: 15px 16px 23px;
+    cursor: pointer;
+}
+.twc-nav-list>li:hover>a { border-bottom: 2px solid #fff; }
+.twc-nav-list>li>a { 
+    color: #fff;font-size: 1.1rem; 
+    padding-bottom: 7px;
+    border-bottom: none;
+    transition: all .17s linear;
+}
+.twc-nav-list>li:first-child { padding-left: 6px }
+/* 伸缩列表 */
+.nav-show:hover>ul, .nav-show:hover>a{
+    height: auto;
+    opacity: 1;
+    border: 0 !important;
+}
+.nav-hide-list li>a:hover {
+    border-bottom: 1px solid #000 !important;
+}
+.nav-hide-list {
+    height: 0px;
+    opacity: 0;
+    overflow: hidden;
+    width: 180px;
+    top: 66px; left: 0;
+    position: absolute;
+    background: #fff;
+    transition: all .3s linear;
+}
+.nav-hide-list li {
+    padding: 12px 20px !important;
+}
+.nav-hide-list a { padding-bottom: 6px; color: #151212; }
+.nav-hide-list a:hover { color: #151212 !important; }
+/* 右侧按钮 */
+.nav-btn-trn {
+    margin-top: -5px; 
+    padding-left: 20px !important; padding-right: 20px !important;
+}
+.btn-trn { 
+    background: transparent; 
+    border: 2px solid #fff !important; border-radius: 3px !important;
+    color: #fff;
+}
+.btn-pink {
+    background: #cf216a; 
+    border-radius: 3px !important;
+    color: #fff;
+}
+/* 海报 */
+.h-456 { height: 456px; }
+.w-1024 { width: 1024px; }
+.img1 {
+    background: url(../img/nav/banner4.jpg) no-repeat;
+    background-size: 100% 100%;
+    overflow: hidden;
+}
+.img1>div::before {
+    content: "";
+    display: table;
+}
+.img1 img { margin-left: 300px !important; margin-top: -800px !important; }
+.top1 { 
+    margin-top: 70px; height: inherit; width: 502px; 
+    position: relative;
+    z-index: 1;
+}
+.nfont { color: #fff !important; }
+.top1-btn-trn {
+    padding: 16px 28px !important;
+}
+.img2 {
+    background: url(../img/nav/banner1.jpg) no-repeat;
+    background-size: 100% 100%;
+    overflow: hidden;
+}
+.img2 img {
+    top: -290px;
+    left: -370px;
+}
+.bfont { color: #12fcc6 !important; }
+
+/* 主体 */
+/* 头部nav */
+.mr-nav {
+    height: 60px;
+    background: #131313;
+}
+/* 内容 */
+.mr-container {
+    background: #272727;
+    padding-top: 70px !important;
+    padding-bottom: 70px !important;
+}
+.mr-cont {
+    margin: 0 auto;
+    width: 1024px;
+    height: 400px;
+    display: flex;
+    justify-content: space-between;
+    /* background: rgb(61, 61, 61); */
+    margin-bottom: 70px;
+}
+.mr-cont>img {
+    width: 700px;
+}
+.mr-cont>div {
+    width: 290px;
+    height: inherit;
+}
+.fgold { color: #ad9e61; }
+.fgolder { color: #c5ad4a; }
+
+/* 回到顶部 */
+.for-top {
+    opacity: 0;
+    overflow: hidden;
+    width: 50px;
+    height: 0;
+    bottom: 140px;
+    right: 40px;
+    transition: all .2s linear;
+    cursor: pointer;
+    z-index: 999;
+}
+
+/* 默认标签样式 */
+a:hover,a:focus { text-decoration: none !important; color: #fff !important; }
+button:focus { box-shadow: none !important; }
+.btn { transition: all .1s linear !important; }
+.btn:hover {
+    transform: scale(1.1,1.1);
+}

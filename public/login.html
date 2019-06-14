@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>登录</title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/login.css">
+</head>
+<body>
+    <div class="container-fluid bg-login h-100">
+        <div class="d-flex justify-content-center align-items-center h-100">
+            <div class="row w-775"><!--775 533-->
+                <!-- 左侧 -->
+                <div id="dleft" class="col-lg-6 col-sm-12 p-0 mb-5">
+                    <div class="border-right border-cf">
+                        <a href="index.html"><img class="ml-12" src="./img/user/EALogo-Small.png" alt="logo"></a>
+                        <p class="mt-2 f-555">使用您的EA账户登录</p>
+                        <p class="mb-2 f-b">用户名</p>
+                        <input class="form-control w-308 lh-11 ol-0" type="text" id="fname">
+                        <p class="mt-4 mb-2 f-b">密码</p>
+                        <input class="form-control w-308 lh-11 ol-0" type="password" id="fpwd">
+                        <div class="mt-1 mb-1 w-308">
+                            <input class="form-check-inline mr-2" type="checkbox">记住账号
+                            <a class="mt-1 float-right f-269 f-b" href="javascript:;">忘记密码了吗</a>
+                        </div>
+                        <button class="mt-3 w-308 font-weight-bold btn btn-purple">登录</button>
+                    </div>
+                </div>
+                <!-- 右侧 -->
+                <div id="rflex" class="col-lg-6 p-0 mb-5">
+                    <div id="dright" class="border-left border-f">
+                        <div class="ml-5 f-555"><!-- ?not -->
+                            <h1 class="font-weight-bold mt-3 mb-4">EA网络</h1>
+                            <p>一个账户将您连接到EA世界：游戏，网站，服务等。</p>
+                            <div id="rblock">
+                                <span class="d-block mb-0">没有账户?</span>
+                                <a class="f-269 font-weight-bold" href="join.html">创建您的EA账户</a>
+                            </div>
+                            <img class="mt-5" src="./img/user/EA_Origin_Lockup_Black.png" alt="origin">
+                            <p>Origin是EA Network的一部分</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- 版权区 -->
+                <div class="col-12 text-center mt-5 f-23 d-flex justify-content-center">
+                    <div class="w-75">
+                        <span>@2019 Electronic Arts Inc.商标属于其各自所有者.版权所有</span><br>
+                        <ul class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item"><a href="#">在Origin购物</a></li>
+                            <li class="breadcrumb-item"><a href="#">法律</a></li>
+                            <li class="breadcrumb-item"><a href="#">用户协议</a></li>
+                            <li class="breadcrumb-item"><a href="#">隐私和Cookie政策</a></li>
+                            <li class="breadcrumb-item"><a href="#">公司信息</a></li>
+                            <li class="breadcrumb-item"><a href="#">EA销售条款</a></li>
+                            <li class="breadcrumb-item"><a href="#">联系我们</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    window.onload=(function(){
+        // alert(1);
+        var oUser = document.getElementsByTagName('input')[0];
+        var oPwd = document.getElementsByTagName('input')[1];
+        var oBtn = document.getElementsByTagName('button')[0];
+
+        oBtn.onclick = function(){
+            if(oUser.value==''||oPwd.value==''){
+                alert('用户名或密码不能为空!');
+                return;
+            }
+            ajax();
+        }
+        function ajax(){
+                var xhr = new XMLHttpRequest();
+                xhr.onreadystatechange = function(){
+                    if(xhr.readyState == 4 && xhr.status == 200){
+                        var result = xhr.responseText;
+                        var arr = JSON.parse(result);
+                        if(arr.code==-1){
+                            alert("用户名或密码错误");
+                        }else{
+                            alert("登录成功");
+                            // 跳转index
+                        }
+                    }
+                }
+                xhr.open(
+                    "get","/user?fname="+fname.value+"&fpwd="+fpwd.value,true
+                    );
+                xhr.send(null);
+        }
+    })();
+    </script>
+    <script src="./js/jquery.min.js"></script>
+    <script src='./js/popper.min.js'></script>
+    <script src='./js/bootstrap.min.js'></script>
+</body>
+</html>

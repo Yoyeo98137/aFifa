@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f93b78;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="Newsletter" class="cls-1" d="M0,25V7.492L13.438,20.148l-0.014.007,0.31,0.272,0,0h0l0.889,0.778,0.887-.779h0l0.039-.037,0.3-.261-0.013-.007L30,6.786V25H0ZM0.3,6H28.946L14.625,19.521Z" transform="translate(0 -0.5)"/>
+</svg>

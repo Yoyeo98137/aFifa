@@ -1,0 +1,108 @@
+/* 底部 */
+footer {
+    position: relative;
+    z-index: 999;
+    width: 100%;
+    background: #fff;
+}
+/* 底部 - 头部 */
+.hea-top {
+    width: 1024px;height: 280px;
+    margin: 0 auto;
+}
+.hea-top>p { margin-top: 100px;margin-bottom: 70px;font-size: 1.7rem; }
+.hea-top li {
+    border-bottom: 0px solid #000;
+    transition: all .06s linear;
+}
+.hea-top li:hover {
+    border-bottom: 2px solid #000;
+}
+.hea-top a { color: #000; }
+.hea-top a:hover,.hea-top a:focus { color: #000; }
+/* 底部 - 中间 */
+.hea-mid {
+    width: 100%;height: 355px;
+    background: #181818;
+    transition: all .2s linear;
+}
+.hm-content {
+    margin: 0 auto;
+    width: 1024px;height: 100%;
+}
+.hm-ul>li {
+    padding-left: 10px;
+    margin-top: 40px;
+    width: 200px;height: 240px;
+}
+.hm-ul p { color:#999999;margin-bottom: 5px !important;cursor: pointer; }
+.mt-222 { margin-top: 2rem !important; }
+.hea-btn { background: #181818; }
+.hea-btn:hover { color: #fff; }
+.hea-btn:hover:focus { box-shadow: none !important; }
+.hea-btn::before {
+    margin-right: 13px;
+    content: "";
+    display: inline-block;
+    height: 3px;
+    width: 470px;
+    background: linear-gradient(to right,#181818,#999);
+}
+.hea-btn::after {
+    margin-left: 13px;
+    content: "";
+    display: inline-block;
+    height: 3px;
+    width: 470px;
+    background: linear-gradient(to left,#181818,#999);
+}
+.bor-hide {
+    color: #999999;
+    width: 1057px;height: 0px;
+    background: #181818;
+    overflow: hidden;
+    opacity: 0;
+    transition: all .2s linear;
+}
+.hea-foot {
+    width: 100%;height: 98px;
+    background: #444444;
+}
+.hea-foot img { width: 60px; }
+.hea-foot ul {
+    display: flex;
+    justify-content: space-around;
+    width: 1085px;height: inherit;
+    text-align: center;
+}
+.hea-foot ul li {   
+    height: inherit;
+    line-height: 98px;
+    color: #fff;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+/* 回到顶部 */
+.for-top {
+    opacity: 0;
+    overflow: hidden;
+    width: 50px;
+    height: 0;
+    bottom: 140px;
+    right: 40px;
+    transition: all .2s linear;
+    cursor: pointer;
+    z-index: 999;
+}
+
+@media screen and (max-width: 768px){
+    /* 底部 */
+    .hea-foot { display: none !important; }
+    header { width: inherit !important; }
+    .hea-top { width: inherit !important; }
+    .hea-mid { width: inherit !important; height: 300px !important; }
+    .hm-content { width: inherit !important; }
+    .bor-hide+a { display: none !important; }
+    .hm-ul li:last-child { display: none !important; }
+}

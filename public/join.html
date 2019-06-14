@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>注册 - 创建一个新的EA账户</title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/join.css">
+</head>
+<body>
+    <div class="cont container d-flex justify-content-center">
+        <div class="w-85 row">
+            <div class="col-lg-12 p-0 h-500 ml-16">
+                <a href="index.html">
+                    <img src="./img/user/EALogo-Small.png" alt="logo">
+                </a>
+            </div>
+            <div class="mt-380 mr-cont row">
+                <!-- 左侧 -->
+                <div id="dflex" class="h-430 mleft col-lg-6 col-md-12 p-0">
+                    <div id="fwrite" class="mt-7 ml-4 f-fff">
+                        <h1>EA网络</h1>
+                        <p class="mb-1">一个账户将您连接到世界: 游戏, 网站, 服务等。</p>
+                        <p>创建您的EA账户</p>
+                        <div class="mt-4 inp">
+                            <input id="fname" class="form-control" type="text" placeholder="输入您的用户名">
+                            <input id="fpwd" class="form-control" type="password" placeholder="输入您的密码">
+                            <input id="repwd" class="form-control" type="password" placeholder="确认您的密码">
+                            <input id="email" class="form-control" type="text" placeholder="输入用来找回密码的邮箱">
+                            <button class="mt-1 btn border-0 btn-purple">马上注册</button>
+                            <span class="mr-8 float-right">已经有账号?</span><br>
+                            <a class="mr-8 mt-9 float-right" href="login.html">现在登录</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- 右侧 -->
+                <div class="h-430 mright col-lg-6 p-0"></div>
+                <!-- 宣传栏 -->
+                <div class="col-12 p-0 mt-4 border-block">
+                    <ul class="oul list-unstyled d-flex justify-content-between f-small">
+                        <li>
+                            <img src="./img/user/1_origin.jpg" alt="01">
+                            <p class="mt-2 mb-0 font-weight-bold">发现PC游戏和优惠</p>
+                            <p class="mb-1">下载和玩精彩的PC游戏，并获得Origin On the House的免费游戏</p>
+                        </li>
+                        <li>
+                            <img src="./img/user/2_everywhere.png" alt="02">
+                            <p class="mt-2 mb-0 font-weight-bold">随处游玩</p>
+                            <p class="mb-1">您的EA帐户是您在控制台，PC，移动设备等上登录EA游戏所需的全部。</p>
+                        </li>
+                        <li>
+                            <img src="./img/user/3_challenge.png" alt="03">
+                            <p class="mt-2 mb-0 font-weight-bold">挑战你的朋友</p>
+                            <p class="mb-1">登录你的EA账户，与老朋友和新挑战者在线玩你喜欢的游戏。</p>
+                        </li>
+                        <li>
+                            <img src="./img/user/4_demo.png" alt="04">
+                            <p class="mt-2 mb-0 font-weight-bold">玩更多游戏</p>
+                            <p class="mb-1">使用您的EA账户下载免费游戏，玩独家试用，演示，测试版等。</p>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 版权区 -->
+                <div class="border-write col-12 text-center f-23 d-flex justify-content-center">
+                    <div id="mbottom" class="mt-3">
+                        <span>@2019 Electronic Arts Inc.商标属于其各自所有者.版权所有</span><br>
+                        <ul class="pt-1 breadcrumb justify-content-center">
+                            <li class="breadcrumb-item"><a href="#">在Origin购物</a></li>
+                            <li class="breadcrumb-item"><a href="#">法律</a></li>
+                            <li class="breadcrumb-item"><a href="#">用户协议</a></li>
+                            <li class="breadcrumb-item"><a href="#">隐私和Cookie政策</a></li>
+                            <li class="breadcrumb-item"><a href="#">公司信息</a></li>
+                            <li class="breadcrumb-item"><a href="#">EA销售条款</a></li>
+                            <li class="breadcrumb-item"><a href="#">联系我们</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    window.onload=(function(){
+        // alert(1);
+        var oUser = document.getElementsByTagName('input')[0];
+        var oPwd = document.getElementsByTagName('input')[1];
+        var rePwd = document.getElementsByTagName('input')[2];
+        var oEml = document.getElementsByTagName('input')[3];
+        var oBtn = document.getElementsByTagName('button')[0];
+
+        oBtn.onclick = function(){
+            if(oUser.value==''||oPwd.value==''||rePwd.value==''||oEml.value==''){
+                alert('请输入您的必要信息!');
+                return;
+            }else if(oPwd.value!==rePwd.value){
+                alert('两次密码输入不一致!');
+                return;
+            }
+            ajax();
+        }
+        function ajax(){
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function(){
+                if(xhr.readyState == 4 && xhr.status == 200){
+                    var result = xhr.responseText;
+                    var arr = JSON.parse(result);
+                    if(arr.code==-2){
+                        alert("用户名已存在!");
+                    }else if(arr.code==1){
+                        alert("注册成功!");
+                        // 跳转login
+                    }
+                }
+            }
+            xhr.open("get",`
+            /user/add?fname=${fname.value}&fpwd=${fpwd.value}&email=${email.value}
+            `,true);
+            xhr.send(null);
+        }
+    })();
+    </script>
+    <script src="./js/jquery.min.js"></script>
+    <script src='./js/popper.min.js'></script>
+    <script src='./js/bootstrap.min.js'></script>
+</body>
+</html>

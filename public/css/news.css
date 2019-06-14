@@ -1,0 +1,61 @@
+html,body { height: 100%; }
+main .mr-top {
+    width: 100%;
+    height: 400px;
+    background: url(../img/news/fifa-19-grid-tile-white1920w.jpg) no-repeat;
+}
+main .mr-top .mtop1 {
+    margin: 0 auto;
+    width: 1024px;
+    height: inherit;
+}
+main .mr-top .mtop1>p { margin-top: 100px; }
+main .mr-top .mtop1>div{
+    width: 200px;
+    height: 7px;
+    background: #000;
+}
+main .mr-cont {
+    width: 100%;
+    padding-top: 40px;
+    padding-bottom: 70px;
+    background: #f3f3f3;
+}
+main .mr-cont .mr-card {
+    margin: 0 auto;
+    width: 1024px;
+    height: auto;
+}
+main .mr-cont .mr-card>ul>li {
+    margin-bottom: 30px;
+    width: 330px; height: 500px;
+    background: #f3f3f3;
+    cursor: pointer;
+}
+.fpink { color: #f93b78; }
+main .mr-cont .mr-card>div {
+    width: 100%;
+    height: 120px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    cursor: pointer;
+}
+main .mr-cont .mr-card>div:hover {
+    border: 2px solid #a3a3a3;
+}
+main .mr-cont .mr-card>div:hover>button {
+    color: #000;
+    transform: scale(1.1,1.1);
+}
+main .mr-cont .mr-card>div:hover>h5 {
+    color: #000;
+}
+main .mr-cont .mr-card>div>button {
+    margin-top: 20px;
+    background: #f3f3f3;
+    border-radius: 50%;
+    padding: 1px 11px;
+    font-size: 1.7rem;
+    color: #b1b1b1;
+}
+main .mr-cont .mr-card>div>h5 { color: #b1b1b1; }
