@@ -4,9 +4,9 @@
 Bootstrap + jQuery + DOM + Ajax + Node.js + MySQL<br>
 Node.js > 8
 ## 运行项目
-    git clone https://github.com/Yoyeo98137/aFifa.git<br>
-    cd aFifa<br>
-    npm install<br>
+    git clone https://github.com/Yoyeo98137/aFifa.git
+    cd aFifa
+    npm install
     访问 http://localhost:9418
 ## 可跳转页面（预览页面）
     首页： https://yoyeo98137.github.io/aFifa/public/index.html
