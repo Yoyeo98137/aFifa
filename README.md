@@ -8,12 +8,12 @@ Node.js > 8
     cd aFifa<br>
     npm install<br>
     访问 http://localhost:9418
-## 可跳转页面
-    首页： https://yoyeo98137.github.io/aFifa/public/index.html<br>
+## 可跳转页面（预览页面）
+    首页： https://yoyeo98137.github.io/aFifa/public/index.html
     导航下拉菜单：
-     关于FIFA19->前100评分球员：https://yoyeo98137.github.io/aFifa/public/player-top-100.html<br>
-     最新消息->FIFA新闻：https://yoyeo98137.github.io/aFifa/public/news.html<br>
-    立即加入：https://yoyeo98137.github.io/aFifa/public/join.html<br>
+     关于FIFA19->前100评分球员：https://yoyeo98137.github.io/aFifa/public/player-top-100.html
+     最新消息->FIFA新闻：https://yoyeo98137.github.io/aFifa/public/news.html
+    立即加入：https://yoyeo98137.github.io/aFifa/public/join.html
     登录：https://yoyeo98137.github.io/aFifa/public/login.html
 ## 制作目的
 利用闲暇时间、堆积代码书写量<br>
