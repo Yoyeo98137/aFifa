@@ -7,6 +7,8 @@ Node.js > 8
     git clone https://github.com/Yoyeo98137/aFifa.git
     cd aFifa
     npm install
+    // 先打开服务器还有mysql(本人用的xampp)
+    // 需要先导入数据库，fifa.sql文件
     访问 http://localhost:9418
 ## 可跳转页面（预览页面）
     首页： https://yoyeo98137.github.io/aFifa/public/index.html
@@ -23,7 +25,8 @@ Node.js > 8
 增加动画效果使用的熟练度
 ## 不足
 基本为静态页面，服务器没有构建多少内容，只包含了用户数据和球员评分top100的25条数据;<br>
-因为时间和框架学习进度的原因，有些应该重复出现的效果只制作了一次，包括首页图片的数据等等
+因为时间和框架学习进度的原因，有些应该重复出现的效果只制作了一次，包括首页图片的数据等等<br>
+还没做轮播图、分页等功能，player-top-100.html的页脚应用出现布局错乱
 ## 项目时间
 2018年10月开始
 
