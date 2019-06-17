@@ -17,6 +17,13 @@ Node.js > 8
      最新消息->FIFA新闻：https://yoyeo98137.github.io/aFifa/public/news.html
     立即加入：https://yoyeo98137.github.io/aFifa/public/join.html
     登录：https://yoyeo98137.github.io/aFifa/public/login.html
+## 页面预览图片
+![image](https://github.com/Yoyeo98137/aFifa/blob/master/img/01.png)
+![image](https://github.com/Yoyeo98137/aFifa/blob/master/img/02.png)
+![image](https://github.com/Yoyeo98137/aFifa/blob/master/img/03.png)
+![image](https://github.com/Yoyeo98137/aFifa/blob/master/img/04.png)
+![image](https://github.com/Yoyeo98137/aFifa/blob/master/img/05.png)
+![image](https://github.com/Yoyeo98137/aFifa/blob/master/img/06.png)
 ## 制作目的
 利用闲暇时间、堆积代码书写量<br>
 熟悉Bootstrap和jQery的使用<br>
