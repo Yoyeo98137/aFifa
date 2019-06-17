@@ -1,0 +1,25 @@
+{
+  "name": "afifa",
+  "version": "1.0.0",
+  "description": "仿FIFA19 游戏官网 响应式页面\r ## 技术栈\r Bootstrap + jQuery + DOM + Ajax + Node.js + MySQL<br>\r Node.js > 8\r ## 运行项目\r     git clone https://github.com/Yoyeo98137/aFifa.git\r     cd aFifa\r     npm install\r     访问 http://localhost:9418\r ## 可跳转页面（预览页面）\r     首页： https://yoyeo98137.github.io/aFifa/public/index.html\r     导航下拉菜单：\r      关于FIFA19->前100评分球员：https://yoyeo98137.github.io/aFifa/public/player-top-100.html\r      最新消息->FIFA新闻：https://yoyeo98137.github.io/aFifa/public/news.html\r     立即加入：https://yoyeo98137.github.io/aFifa/public/join.html\r     登录：https://yoyeo98137.github.io/aFifa/public/login.html\r ## 制作目的\r 利用闲暇时间、堆积代码书写量<br>\r 熟悉Bootstrap和jQery的使用<br>\r 熟悉弹性布局的使用<br>\r 制作一个用户交互感好的网页<br>\r 增加动画效果使用的熟练度\r ## 不足\r 基本为静态页面，服务器没有构建多少内容，只包含了用户数据和球员评分top100的25条数据;<br>\r 因为时间和框架学习进度的原因，有些应该重复出现的效果只制作了一次，包括首页图片的数据等等\r ## 项目时间\r 2018年10月开始",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yoyeo98137/aFifa.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Yoyeo98137/aFifa/issues"
+  },
+  "homepage": "https://github.com/Yoyeo98137/aFifa#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mysql": "^2.17.1"
+  }
+}
